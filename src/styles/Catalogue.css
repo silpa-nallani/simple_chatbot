@@ -1,0 +1,423 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* MAIN ROOT */
+.shell-app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f7fb;
+}
+
+/* ---------------------------------------------
+   TOP HEADER
+--------------------------------------------- */
+.shell-header {
+  height: 56px;
+  background: #DA291C;
+  color:  #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+}
+
+.shell-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shell-logo {
+  font-size: 20px;
+  font-weight: 800;
+  color: #FFCD00;
+}
+
+.shell-project-title {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.shell-header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+.user-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  background: #1B1B1B;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* ---------------------------------------------
+   3-COLUMN LAYOUT
+--------------------------------------------- */
+.shell-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 230px 1fr 330px;
+  overflow: hidden;
+}
+
+/* ---------------------------------------------
+   LEFT SIDEBAR
+--------------------------------------------- */
+.shell-sidebar {
+  background: #1B1B1B;
+  border-right: 2px solid #DA291C;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: #FFFFFF;
+}
+
+.sidebar-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #7b8598;
+  margin-bottom: 4px;
+}
+
+.sidebar-list {
+  list-style: none;
+}
+
+.sidebar-item {
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sidebar-item:hover {
+  background: rgba(255, 205, 0, 0.15);
+}
+
+.sidebar-item.active {
+  background: #FFCD00;
+  color: #2C2C2C;
+}
+
+/* Quick Tip */
+.quick-tip {
+  margin-top: auto;
+  background: #FFCD00;
+  padding: 8px;
+  border-left: 4px solid #DA291C;
+  border-radius: 6px;
+  display: flex;
+  gap: 6px;
+  color: #2C2C2C; 
+  align-items: flex-start;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+.quick-tip-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.quick-tip-title {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.quick-tip-text {
+  font-size: 11px;
+  color: #616b80;
+}
+
+/* ---------------------------------------------
+   CENTER PANEL
+--------------------------------------------- */
+.shell-main {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #F3F3F3;
+}
+
+/* Toolbar */
+.main-toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.toolbar-left {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  padding: 6px 14px;
+  font-size: 12px;
+  background: #FFFFFF;
+  color: #2C2C2C;
+  border-radius: 6px;
+  border: 1px solid #d1d7e5;
+  border-color: #DA291C;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #DA291C; /* primary red button */
+  border-color: #DA291C;
+  color: #FFFFFF;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border-radius: 16px;
+  border: 1px solid #FFCD00; /* yellow border input */
+  background: #FFFFFF;
+  color: #2C2C2C;
+}
+
+/* ---------------------------------------------
+   COMPONENT LIBRARY + VIEWPORT GRID
+--------------------------------------------- */
+.middle-layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 14px;
+  overflow: hidden;
+}
+
+/* ---------------------------------------------
+   COMPONENT LIBRARY
+--------------------------------------------- */
+.component-library {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #FFCD00;
+  padding: 12px;
+  overflow-y: auto;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.panel-title {
+  font-weight: 700;
+}
+
+.panel-select {
+  padding: 4px 6px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccd3e1;
+}
+
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.tab {
+  flex: 1;
+  padding: 5px 0;
+  border-radius: 6px;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  background: #F3F3F3;
+  color: #2C2C2C;
+}
+
+.tab.active {
+  background: #DA291C; /* active tab red */
+  color: #FFFFFF;
+}
+
+.component-section-header {
+  font-size: 12px;
+  font-weight: 700;
+  color: #697183;
+  margin-bottom: 6px;
+}
+
+/* Component Card */
+.component-card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  border: 1px solid #FFCD00;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.component-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFCD00; /* yellow icon bg */
+  color: #DA291C;
+}
+
+.component-name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.component-subtext {
+  font-size: 11px;
+  color: #64728b;
+}
+
+.component-meta {
+  font-size: 11px;
+  color: #727b8e;
+}
+
+/* ---------------------------------------------
+   VIEWPORT
+--------------------------------------------- */
+.viewport {
+  background: #F3F3F3;
+  border-radius: 12px;
+  border: 2px dashed #DA291C;
+  padding: 16px;
+  position: relative;
+}
+
+.viewport-inner {
+  border: 1px dashed #FFCD00;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #2C2C2C;
+}
+
+.viewport-icon {
+  font-size: 36px;
+}
+
+.viewport-text-main {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.viewport-toolbar {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.icon-square {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------
+   RIGHT PROPERTIES PANEL
+--------------------------------------------- */
+.properties-panel {
+  background: #1B1B1B;
+  border-left: 2px solid #DA291C;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+  color: #FFFFFF;
+}
+
+.prop-card {
+  background: #FFCD00;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #DA291C;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  color: #1B1B1B;
+}
+
+.prop-title {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: #1B1B1B;
+}
+
+.prop-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #1B1B1B;
+}
+
+.prop-input {
+  width: 60px;
+  padding: 4px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid #FFCD00;
+  background: #FFFFFF;
+  color: #2C2C2C;
+}
